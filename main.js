@@ -17,9 +17,6 @@ function exponential(x, n) {
     if (n === 0) {
         return 1
     }
-    if (n < 0) {
-        console.log(`I wouldn't even know how to manually start an inverse exponential function. You'd have to start with a manual division first, I guess`);
-    }
     let baseNum = x;
     for (let counter = 1; counter < n; counter = add(counter, 1)) {
         baseNum = multiply(baseNum, x);
@@ -31,7 +28,7 @@ function exponential(x, n) {
 //Factorial Function
 function factorial(n) {
     let currentTotal = 1;
-    for ( let counter = 1; counter <= n; counter ++) {
+    for ( let counter = 1; counter <= n; counter = add(counter, 1)) {
         let currentMultiplicand = counter;
         currentTotal = multiply(currentTotal, currentMultiplicand);
     }
