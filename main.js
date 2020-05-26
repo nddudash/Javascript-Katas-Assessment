@@ -42,8 +42,8 @@ function factorial(n) {
 function fibonacci(n) {
     let fiboArray = [0, 1];
     for (let counter = 2; counter < n; counter = add(counter, 1)) {
-        let currentNumber = add(fiboArray[counter - 2], fiboArray[counter - 1])
+        let currentNumber = add(fiboArray[add(counter, (-2))], fiboArray[add(counter, (-1))]);
         fiboArray.push(currentNumber);
     }
-    return fiboArray[n - 1];
+    return fiboArray[add(n, (-1))];
 }
